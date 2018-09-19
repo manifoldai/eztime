@@ -7,8 +7,12 @@ https://stackoverflow.com/questions/5478351/python-time-measure-function
 """
 
 import time
+import logging
 import functools
 from contextlib import contextmanager
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
 
 def time_func(func):
@@ -17,8 +21,13 @@ def time_func(func):
         startTime = time.time()
         out = func(*args, **kwargs)
         elapsedTime = time.time() - startTime
-        print('function [{}] finished in {} ms'.format(
-            func.__name__, int(elapsedTime * 1000)))
+        elapsedTime_ms = int(elapsedTime * 1000)
+        if elapsedTime_ms > 1000:
+            logger.info('function [{}] finished in {} s'.format(
+                func.__name__, round(elapsedTime_ms / 1000, 3)))
+        else:
+            logger.info('function [{}] finished in {} ms'.format(
+                func.__name__, elapsedTime_ms))
         return out
 
     return timed_func
@@ -29,4 +38,8 @@ def time_chunk(name):
     startTime = time.time()
     yield
     elapsedTime = time.time() - startTime
-    print('[{}] finished in {} ms'.format(name, int(elapsedTime * 1000)))
+    elapsedTime_ms = int(elapsedTime * 1000)
+    if elapsedTime_ms > 1000:
+        logger.info('[{}] finished in {} s'.format(name, round(elapsedTime_ms / 1000, 3)))
+    else:
+        logger.info('[{}] finished in {} ms'.format(name, elapsedTime_ms))

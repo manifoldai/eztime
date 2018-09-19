@@ -1,5 +1,6 @@
 # eztime
-A timer that easily integrates with functions and code chunks
+A timer that easily integrates with functions and code chunks. 
+Use it to log the time elapsed of any function or code chunk.
 
 Current version == 0.0.1
 
