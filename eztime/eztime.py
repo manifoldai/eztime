@@ -1,6 +1,6 @@
 """
 This code was written by Ray in response to a stack overflow post.
-We are simply packaging it up here for easy use and spread for others.
+We are simply packaging it up here for easy use and spreading to others.
 
 Original Stack Overflow post:
 https://stackoverflow.com/questions/5478351/python-time-measure-function
