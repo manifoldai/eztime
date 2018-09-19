@@ -4,6 +4,13 @@ Use it to log the time elapsed of any function or code chunk.
 
 Current version == 0.0.3
 
+Installation:
+```
+$ pip install eztime # first time installation
+
+$ pip install -U eztime # upgrade to latest version
+```
+
 # Easily integrates into your code
 
 
