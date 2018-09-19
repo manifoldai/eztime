@@ -2,7 +2,7 @@
 A timer that easily integrates with functions and code chunks. 
 Use it to log the time elapsed of any function or code chunk.
 
-Current version == 0.0.2
+Current version == 0.0.3
 
 # Easily integrates into your code
 
