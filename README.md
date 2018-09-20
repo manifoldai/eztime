@@ -4,6 +4,9 @@ Use it to log the time elapsed of any function or code chunk.
 
 Current version == 0.0.3
 
+Original code source: Ray
+https://stackoverflow.com/questions/5478351/python-time-measure-function
+
 Installation:
 ```
 $ pip install eztime # first time installation
